@@ -5,7 +5,7 @@ import { getJoke } from "../actions";
 const Jokes = ({ joke, answer, isFetching, error, getJoke }) => {
   useEffect(() => {
     getJoke();
-  }, []);
+  }, [getJoke]);
 
   const handleJokeClick = () => {
     getJoke();
@@ -23,7 +23,7 @@ const Jokes = ({ joke, answer, isFetching, error, getJoke }) => {
       <div className="joke container">
         <h2>Joke: {joke}</h2>
         <button className="btn joke" onClick={handleJokeClick}>
-          Get Joke
+          New Joke
         </button>
       </div>
       <div className="answer container">

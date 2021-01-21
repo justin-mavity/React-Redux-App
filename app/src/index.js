@@ -9,6 +9,8 @@ import logger from "redux-logger";
 
 import { reducer } from "./reducers";
 
+import "./App.css";
+
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(

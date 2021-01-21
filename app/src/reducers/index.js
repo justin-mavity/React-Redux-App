@@ -33,7 +33,6 @@ export const reducer = (state = initiialState, action) => {
     case FETCH_JOKE_ANSWER:
       return {
         ...state,
-        joke: state.joke,
         answer: action.payload,
         isFetching: false,
         error: "",
